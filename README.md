@@ -1,3 +1,31 @@
+# Virtual Eyewear Try-On & Optical AI Recommendation System
+
+Try on eyeglasses virtually using your live camera or a photo, get AI-powered frame recommendations based on your face shape, and shop with full cart, checkout, and sandbox payment support.
+
+**🔗 Live Demo:** https://virtual-try-on-6ac9.vercel.app
+**👥 Team project** · 4 contributors
+
+## Tech Stack
+
+**Frontend:** Vue 3, Vite, EJS, Bootstrap
+**Backend:** Node.js, Express
+**Database:** SQLite (local), Turso/libSQL (production)
+**AI & Vision:** MediaPipe Face Landmarker, Google Gemini API
+**Integrations:** Stripe, SSLCommerz, Cloudinary, MapTiler, OSRM, Nodemailer
+**Deployment:** Vercel
+
+## My Contributions
+
+I was responsible for the virtual try-on experience and the store-locator features:
+
+- **Live virtual mirror.** Real-time try-on where the selected frame follows the user's face on the live camera feed, using MediaPipe facial landmarks and canvas overlay. Includes landmark smoothing to reduce jitter, plus camera-capture and photo-upload modes.
+- **Frame positioning.** Calculates frame width, height, rotation, and placement from eye distance, nose bridge, and temple landmarks so the glasses tilt and scale naturally with head movement.
+- **Lens tint preview.** Switch between clear, blue-light, gray, brown, and sunglass tints on the selected frame without changing the product.
+- **Frame comparison.** Side-by-side comparison of frames by try-on preview, price, shape, color, material, size, availability, and AI style suggestion.
+- **Ratings & reviews.** Customers can rate and review frames they have tried on or ordered, with edit and delete support and a rating summary on the frame details page.
+- **Nearby stores & directions.** Finds optical branches by device location or manual area selection using MapTiler/OpenStreetMap, sorts them by distance, and shows turn-by-turn routes via OSRM with a Google Maps link.
+
+
 # Virtual Try-On Eyewear Store
 
 A Node.js, Express, EJS, and Vue application for browsing eyewear, trying frames on with MediaPipe face landmarks, and receiving Gemini-powered styling guidance. It uses SQLite for local development and Turso/libSQL for persistent Vercel deployments.
